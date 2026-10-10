@@ -32,7 +32,10 @@ async def get_video_handler(message: types.Message):
 
 @dp.message(F.text == "📜 Инструкция")
 async def get_instruction_handler(message: types.Message):
-    await message.answer("Привет! Выбери нужный раздел в меню ниже:", reply_markup=keyboard)
+    await message.answer(""📜 **Инструкция по выполнению:**\n\n"
+        "1. Зайди в TikTok и найди нужное видео.\n"
+        "2. Оставь комментарий и прикрепи картинку.\n"
+        "3. Повтори 10 раз и отправь скриншоты сюда!", reply_markup=keyboard)
 
 @dp.message(F.text == "💬 Поддержка")
 async def get_support_handler(message: types.Message):
